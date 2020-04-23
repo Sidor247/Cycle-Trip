@@ -1,6 +1,0 @@
-framework module Pods_Cycle_Trip {
-  umbrella header "Pods-Cycle Trip-umbrella.h"
-
-  export *
-  module * { export * }
-}

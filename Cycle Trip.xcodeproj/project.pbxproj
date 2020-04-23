@@ -21,6 +21,7 @@
 		77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1C244F8D0400B28172 /* ChatVC.swift */; };
 		77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* StartAnimation.swift */; };
 		77A42D21244FA50900B28172 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D20244FA50900B28172 /* Model.swift */; };
+		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		77A42D1C244F8D0400B28172 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		77A42D1E244F8DB100B28172 /* StartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimation.swift; sourceTree = "<group>"; };
 		77A42D20244FA50900B28172 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E5AC258D60FE5AFD838BEB1 /* Pods-Cycle Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.debug.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.debug.xcconfig"; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				7796A16B244EF5C7002FB4FA /* Assets.xcassets */,
 				7796A16D244EF5C7002FB4FA /* LaunchScreen.storyboard */,
 				7796A170244EF5C7002FB4FA /* Info.plist */,
+				77A702F42451664300167E5F /* GoogleService-Info.plist */,
 				7796A168244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld */,
 				7796A176244F23E8002FB4FA /* Экраны */,
 			);
@@ -217,6 +220,7 @@
 			files = (
 				7796A16F244EF5C7002FB4FA /* LaunchScreen.storyboard in Resources */,
 				7796A16C244EF5C7002FB4FA /* Assets.xcassets in Resources */,
+				77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
