@@ -8,4 +8,6 @@ target 'Cycle Trip' do
   pod 'PinLayout'
   pod 'PureLayout'
   pod 'Mapbox-iOS-SDK', '~> 5.8'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end
