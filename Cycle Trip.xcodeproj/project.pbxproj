@@ -22,6 +22,10 @@
 		77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* StartAnimation.swift */; };
 		77A42D21244FA50900B28172 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D20244FA50900B28172 /* Model.swift */; };
 		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
+		802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEA92455D6F500CF04DC /* ChatVCCell.swift */; };
+		802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAB2455E33800CF04DC /* CustomImageView.swift */; };
+		802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAD2455EC6800CF04DC /* ChatAPI.swift */; };
+		802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */; };
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,10 @@
 		77A42D1E244F8DB100B28172 /* StartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimation.swift; sourceTree = "<group>"; };
 		77A42D20244FA50900B28172 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		802FCEA92455D6F500CF04DC /* ChatVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCCell.swift; sourceTree = "<group>"; };
+		802FCEAB2455E33800CF04DC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		802FCEAD2455EC6800CF04DC /* ChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
+		802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCwithConnection.swift; sourceTree = "<group>"; };
 		8E5AC258D60FE5AFD838BEB1 /* Pods-Cycle Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.debug.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.debug.xcconfig"; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				77A42D1C244F8D0400B28172 /* ChatVC.swift */,
+				802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */,
+				802FCEA92455D6F500CF04DC /* ChatVCCell.swift */,
+				802FCEAB2455E33800CF04DC /* CustomImageView.swift */,
+				802FCEAD2455EC6800CF04DC /* ChatAPI.swift */,
 			);
 			path = "Чат";
 			sourceTree = "<group>";
@@ -274,12 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A42D14244F5F3C00B28172 /* ViewController.swift in Sources */,
+				802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */,
+				802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */,
 				77A42D10244F5ED100B28172 /* MapController.swift in Sources */,
+				802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */,
 				77A42D12244F5EE000B28172 /* ProfileView.swift in Sources */,
 				77A42D21244FA50900B28172 /* Model.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
 				7796A17D244F5448002FB4FA /* BackgroundView.swift in Sources */,
+				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
 				77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */,
 				77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */,
 				7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */,
