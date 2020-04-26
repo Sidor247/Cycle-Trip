@@ -22,7 +22,7 @@ class ChatVC: UIViewController {
             tableView.register(ChatVCCell.self, forCellReuseIdentifier: "cellid")
             setupNavigationView()
             setupTableView()
-         //   ChatAPI.shared.fetchChatList()
+         //   ChatAPI.shared.fetchChatList() asd
         }
     // MARK: - Setup View
     func setupNavigationView(){
