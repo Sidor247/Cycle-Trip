@@ -1,36 +1,35 @@
 //
-//  ChatVC.swift
+//  ChatVCwithConnection.swift
 //  Cycle Trip
 //
-//  Created by Igor Lebedev on 21/04/2020.
+//  Created by Vladimir Ovsiannikov on 26.04.2020.
 //  Copyright © 2020 Прогеры. All rights reserved.
 //
-
+/*
 import UIKit
 
 class ChatVC: UIViewController {
     let tableView = UITableView()
-    let navigationBar = UINavigationBar()
+    let navBar = UINavigationBar()
     var safeArea: UILayoutGuide!
-    let amiboList = ["Chat1", "Chat2", "Chat3", "Chat4"]
-    let timeList = ["21.06.2020 at 2 pm", "23.06.2020 at 10 am", "01.05.2020 at 6 pm", "10.10.2020 at 5 pm"]
+    let chatList = [Chat]()
     
         override func viewDidLoad() {
             view.backgroundColor = .white
             safeArea=view.layoutMarginsGuide
             tableView.dataSource = self
             tableView.register(ChatVCCell.self, forCellReuseIdentifier: "cellid")
-            setupNavigationView()
+         
+            let anonymousFunction{(fetchedChatList: [Chat])
+                DispatchQueue.main.async {
+                    self.chatList = fetchedChatList
+                    self.tableView.reloadData()
+                }
+            }
             setupTableView()
-         //   ChatAPI.shared.fetchChatList() asd
+            ChatAPI.shared.fetchChatList(onCompletion: anonymousFunction)
         }
     // MARK: - Setup View
-    func setupNavigationView(){
-           view.addSubview(navigationBar)
-           
-           navigationBar.translatesAutoresizingMaskIntoConstraints = true
-          
-       }
         func setupTableView() {
             //always add the uiview first before setting constrains
             view.addSubview(tableView)
@@ -42,7 +41,6 @@ class ChatVC: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
             
         }
-   
 
     }
 
@@ -50,18 +48,20 @@ class ChatVC: UIViewController {
 
     extension ChatVC: UITableViewDataSource{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return amiboList.count
+            return chatList.count
         }
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
+            let chat = chatList[indexPath.row]
             guard let ChatVCCell = cell as? ChatVCCell else {
                 return cell
             }
-            let name = amiboList[indexPath.row]
-            let time = timeList[indexPath.row]
-            ChatVCCell.nameLable.text = name
-            ChatVCCell.whenItBeLable.text = time
+            
+            ChatVCCell.nameLable.text = chat.name
+            ChatVCCell.whenItBeLable.text = chat.time + date
+        //    if let url = URL(string: <#T##String#>){}
             
             return cell
         }
 }
+*/
