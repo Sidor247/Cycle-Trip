@@ -23,6 +23,7 @@ class AuthScreen: UIViewController {
     let buttonSignUp = UIButton()
     let buttonSignIn = UIButton()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         modalTransitionStyle = .coverVertical
