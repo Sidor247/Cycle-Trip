@@ -15,6 +15,7 @@ class TabBar: UITabBarController {
         modalTransitionStyle = .coverVertical
         modalPresentationStyle = .fullScreen
         viewControllers = [ChatVC(), MapController(), ViewController()]
+        selectedIndex = 1
 
         // Do any additional setup after loading the view.
     }

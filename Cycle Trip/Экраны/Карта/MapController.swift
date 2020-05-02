@@ -15,7 +15,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .yellow
-    tabBarItem = UITabBarItem(title: "Карта", image: nil , selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Карта", image: UIImage(systemName: "map") , selectedImage: UIImage(systemName: "map.fill"))
     let url = URL(string: "mapbox://styles/sid0r247/ck95uvmu95fhz1ioahpaf3n0t")
     let mapView = MGLMapView(frame: view.bounds, styleURL: url)
     mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

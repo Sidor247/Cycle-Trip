@@ -69,6 +69,7 @@ class AuthScreen: UIViewController {
         
         [backgroundScreen, labelProgramName, labelLogin, labelPassword, password, login, buttonSignUp, buttonSignIn].forEach {
             view.addSubview($0)
+        print(modalPresentationStyle)
         }
     }
 
@@ -119,7 +120,6 @@ class AuthScreen: UIViewController {
             .right(UIScreen.main.bounds.width / 2 + 10)
             .sizeToFit(.width)
     }
-
 
     @objc private func didTapButtonSignIn() {
         let tabBar = TabBar()

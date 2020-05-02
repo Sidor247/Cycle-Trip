@@ -11,9 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarItem = UITabBarItem(title: "Профиль", image: nil , selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person") , selectedImage: UIImage(systemName: "person.fill"))
         self.navigationController?.navigationBar.isTranslucent = false
-        self.title = "Profile"
         self.view.backgroundColor = .white
         self.view.addSubview(self.profileView)
         self.profileView.autoPinEdgesToSuperviewEdges()

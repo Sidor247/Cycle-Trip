@@ -10,13 +10,11 @@ import UIKit
 
 
 class StartAnimation: UIViewController {
-    let loggedIn = false
     let label = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            let authScreen = AuthScreen()
-            self.present(authScreen, animated: true, completion: nil)
+            self.present(AuthScreen(), animated: true, completion: nil)
         }
         view.backgroundColor = .systemPink
         label.font = UIFont(name: "San Francisco", size: 50)

@@ -8,8 +8,5 @@
 
 import Foundation
 class User {
-    var loggedIn: Bool
-    init(loggedIn:Bool) {
-        self.loggedIn = loggedIn
-    }
+    var loggedIn = false
 }
