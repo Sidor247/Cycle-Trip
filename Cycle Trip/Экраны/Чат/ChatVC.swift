@@ -16,7 +16,6 @@ class ChatVC: UIViewController {
     let timeList = ["21.06.2020 at 2 pm", "23.06.2020 at 10 am", "01.05.2020 at 6 pm", "10.10.2020 at 5 pm"]
     
         override func viewDidLoad() {
-            tabBarItem = UITabBarItem(title: "Чат", image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "message.fill"))
             view.backgroundColor = .white
             safeArea=view.layoutMarginsGuide
             tableView.dataSource = self

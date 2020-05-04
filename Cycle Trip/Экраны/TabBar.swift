@@ -12,9 +12,15 @@ class TabBar: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalTransitionStyle = .coverVertical
+        modalTransitionStyle = .flipHorizontal
         modalPresentationStyle = .fullScreen
-        viewControllers = [ChatVC(), MapController(), ViewController()]
+        let viewController = ViewController()
+        let chatVC = ChatVC()
+        let mapController = MapController()
+        viewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person") , selectedImage: UIImage(systemName: "person.fill"))
+        mapController.tabBarItem = UITabBarItem(title: "Карта", image: UIImage(systemName: "map") , selectedImage: UIImage(systemName: "map.fill"))
+        chatVC.tabBarItem = UITabBarItem(title: "Чат", image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "message.fill"))
+        viewControllers = [chatVC, mapController, viewController]
         selectedIndex = 1
 
         // Do any additional setup after loading the view.

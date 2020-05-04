@@ -8,128 +8,112 @@
 
 import UIKit
 import PinLayout
+import Firebase
 
 class AuthScreen: UIViewController {
     
-    let backgroundScreen = BackgroundView()
+    var delegate: User? = nil
     
     let labelProgramName = UILabel()
-    let labelPassword = UILabel()
-    let labelLogin = UILabel()
-    
-    let password = UITextField()
-    let login = UITextField()
-    
-    let buttonSignUp = UIButton()
-    let buttonSignIn = UIButton()
-    
-    
+    let login = CustomTextField(name: "Логин", color: 0xEBEBEB, security: false)
+    let password = CustomTextField(name: "Пароль", color: 0xEBEBEB, security: true)
+        
+    let buttonSignIn = CustomButton(color: 0xFFFFFF, background: 0x4680C2, title: "Войти")
+    let buttonSignUp = CustomButton(color: 0x4680C2, background: 0xFFFFFF, title: "Зарегистрироваться")
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalTransitionStyle = .coverVertical
-        modalPresentationStyle = .fullScreen
-        labelProgramName.font = UIFont(name: "Snell Roundhand", size: 50)
-        labelProgramName.textAlignment = .center
-        labelProgramName.textColor = .white
+
+        view.backgroundColor = .white
+
         labelProgramName.text = "Cycle Trip"
-        
-        labelLogin.textColor = .white
-        labelLogin.font = UIFont(name: "Snell Roundhand", size: 30)
-        labelLogin.textAlignment = .left
-        labelLogin.textColor = .white
-        labelLogin.text = "Login:"
-        
-        labelPassword.font = UIFont(name: "Snell Roundhand", size: 30)
-        labelPassword.textAlignment = .left
-        labelPassword.textColor = .white
-        labelPassword.text = "Password:"
-        
-        password.backgroundColor = .white
-        password.layer.cornerRadius = 8
-        password.isSecureTextEntry = true
-        password.textContentType = .password
-        password.font = UIFont.systemFont(ofSize: 14)
-        
-        login.backgroundColor = .white
-        login.layer.cornerRadius = 8
-        login.textContentType = .nickname
-        login.font = UIFont.systemFont(ofSize: 14)
-        
-        buttonSignIn.isEnabled = true
-        buttonSignIn.backgroundColor = .orange
-        buttonSignIn.layer.cornerRadius = 8
-        buttonSignIn.setTitle("Sing in", for: .normal)
+        labelProgramName.font = UIFont(name: "Arial", size: 50)
+        labelProgramName.textColor = UIColorFromRGB(0x4680C2)
+            
         buttonSignIn.addTarget(self, action: #selector(didTapButtonSignIn), for: .touchUpInside)
-        
-        buttonSignUp.isEnabled = true
-        buttonSignUp.backgroundColor = .orange
-        buttonSignUp.layer.cornerRadius = 8
-        buttonSignUp.setTitle("Sign up", for: .normal)
         buttonSignUp.addTarget(self, action: #selector(didTapButtonSignUp), for: .touchUpInside)
-        
-        [backgroundScreen, labelProgramName, labelLogin, labelPassword, password, login, buttonSignUp, buttonSignIn].forEach {
+                
+        [labelProgramName, login, password, buttonSignIn, buttonSignUp].forEach {
             view.addSubview($0)
-        print(modalPresentationStyle)
         }
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        backgroundScreen.pin.all()
-        
+            
         labelProgramName.pin
             .top(view.pin.safeArea.top + 50)
             .hCenter()
             .sizeToFit()
-        
-        labelLogin.pin
-            .vCenter(-100)
-            .left(20)
-            .right(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-        
-        labelPassword.pin
-            .vCenter(-60)
-            .left(20)
-            .right(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-        
+            
         login.pin
             .vCenter(-100)
-            .right(20)
-            .left(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-        
+            .horizontally(20)
+            .height(45)
+                
         password.pin
-            .vCenter(-60)
-            .right(20)
-            .left(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-        
+            .vCenter(-50)
+            .horizontally(20)
+            .height(45)
+                
         buttonSignIn.pin
-            .vCenter(-20)
-            .right(20)
-            .left(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-            
-        
-        buttonSignUp.pin
-            .vCenter(-20)
-            .left(20)
-            .right(UIScreen.main.bounds.width / 2 + 10)
-            .sizeToFit(.width)
-    }
+            .vCenter()
+            .height(40)
+            .horizontally(20)
 
-    @objc private func didTapButtonSignIn() {
-        let tabBar = TabBar()
-        present(tabBar, animated: true, completion: nil)
+        buttonSignUp.pin
+            .bottom(view.pin.safeArea.bottom + 30)
+            .height(20)
+            .horizontally(40)
     }
     
-    @objc private func didTapButtonSignUp() {
-//        let tableViewController = TableViewController()
-//        
-//        present(tableViewController, animated: true, completion: nil)
-        print("\(#function)")
+    func setState(data: String) {
+        print("\(data) 01")
+    }
+    
+    @objc func didTapButtonSignIn() {
+        guard let login = login.text, let pass = password.text, login != "", pass != ""
+            else { print("Empty textfields")
+                    return }
+        Auth.auth().signIn(withEmail: login, password: pass) { [weak self] user, error in
+            if error != nil {
+                print("Error")
+                return
+            }
+            if user != nil {
+                self!.dismiss(animated: true, completion: nil)
+                return }
+            print("No such user")
+        }
+
+
+    }
+        
+    @objc func didTapButtonSignUp() {
+    //  let tableViewController = TableViewController()
+    //
+    //  present(tableViewController, animated: true, completion: nil)
+        guard let login = login.text, let pass = password.text, login != "", pass != ""
+        else { print("Empty textfields")
+                return }
+        Auth.auth().createUser(withEmail: login, password: pass) { [weak self] user, error in
+            if error != nil {
+                print("Error")
+                return
+            }
+            if user != nil {
+                self!.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+
+    func UIColorFromRGB(_ rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
+

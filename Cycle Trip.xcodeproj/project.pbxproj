@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771EF0C0245F2DD900E0F70C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0BF245F2DD900E0F70C /* CustomButton.swift */; };
+		771EF0C2245F2DE800E0F70C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0C1245F2DE800E0F70C /* CustomTextField.swift */; };
+		771EF0C4245F2DFD00E0F70C /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0C3245F2DFD00E0F70C /* CustomColor.swift */; };
+		771EF0CA245F6BED00E0F70C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0C9245F6BEC00E0F70C /* Model.swift */; };
+		771EF0CC245F738B00E0F70C /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0CB245F738B00E0F70C /* MapController.swift */; };
+		771EF0CE246027C300E0F70C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 771EF0CD246027C300E0F70C /* avatar.png */; };
 		7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A15F244EF5C4002FB4FA /* AppDelegate.swift */; };
 		7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A161244EF5C4002FB4FA /* SceneDelegate.swift */; };
 		7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7796A168244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld */; };
@@ -14,13 +20,10 @@
 		7796A16F244EF5C7002FB4FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7796A16D244EF5C7002FB4FA /* LaunchScreen.storyboard */; };
 		7796A179244F2937002FB4FA /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A178244F2937002FB4FA /* TabBar.swift */; };
 		7796A17B244F542B002FB4FA /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A17A244F542B002FB4FA /* AuthScreen.swift */; };
-		7796A17D244F5448002FB4FA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A17C244F5448002FB4FA /* BackgroundView.swift */; };
-		77A42D10244F5ED100B28172 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D0F244F5ED000B28172 /* MapController.swift */; };
 		77A42D12244F5EE000B28172 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D11244F5EE000B28172 /* ProfileView.swift */; };
 		77A42D14244F5F3C00B28172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D13244F5F3C00B28172 /* ViewController.swift */; };
 		77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1C244F8D0400B28172 /* ChatVC.swift */; };
 		77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* StartAnimation.swift */; };
-		77A42D21244FA50900B28172 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D20244FA50900B28172 /* Model.swift */; };
 		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
 		802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEA92455D6F500CF04DC /* ChatVCCell.swift */; };
 		802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAB2455E33800CF04DC /* CustomImageView.swift */; };
@@ -31,6 +34,12 @@
 
 /* Begin PBXFileReference section */
 		4A73373274DAE35948469F86 /* Pods-Cycle Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.release.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.release.xcconfig"; sourceTree = "<group>"; };
+		771EF0BF245F2DD900E0F70C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		771EF0C1245F2DE800E0F70C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		771EF0C3245F2DFD00E0F70C /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		771EF0C9245F6BEC00E0F70C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		771EF0CB245F738B00E0F70C /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		771EF0CD246027C300E0F70C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		7796A15C244EF5C4002FB4FA /* Cycle Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cycle Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7796A15F244EF5C4002FB4FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7796A161244EF5C4002FB4FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,13 +49,10 @@
 		7796A170244EF5C7002FB4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7796A178244F2937002FB4FA /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		7796A17A244F542B002FB4FA /* AuthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
-		7796A17C244F5448002FB4FA /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		77A42D0F244F5ED000B28172 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		77A42D11244F5EE000B28172 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		77A42D13244F5F3C00B28172 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77A42D1C244F8D0400B28172 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		77A42D1E244F8DB100B28172 /* StartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimation.swift; sourceTree = "<group>"; };
-		77A42D20244FA50900B28172 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		802FCEA92455D6F500CF04DC /* ChatVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCCell.swift; sourceTree = "<group>"; };
 		802FCEAB2455E33800CF04DC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
@@ -99,13 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				7796A15F244EF5C4002FB4FA /* AppDelegate.swift */,
-				77A42D20244FA50900B28172 /* Model.swift */,
 				7796A161244EF5C4002FB4FA /* SceneDelegate.swift */,
 				7796A16B244EF5C7002FB4FA /* Assets.xcassets */,
 				7796A16D244EF5C7002FB4FA /* LaunchScreen.storyboard */,
 				7796A170244EF5C7002FB4FA /* Info.plist */,
 				77A702F42451664300167E5F /* GoogleService-Info.plist */,
 				7796A168244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld */,
+				771EF0C9245F6BEC00E0F70C /* Model.swift */,
 				7796A176244F23E8002FB4FA /* Экраны */,
 			);
 			path = "Cycle Trip";
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				77A42D13244F5F3C00B28172 /* ViewController.swift */,
+				771EF0CD246027C300E0F70C /* avatar.png */,
 				77A42D11244F5EE000B28172 /* ProfileView.swift */,
 			);
 			path = "Профиль";
@@ -137,7 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				7796A17A244F542B002FB4FA /* AuthScreen.swift */,
-				7796A17C244F5448002FB4FA /* BackgroundView.swift */,
+				771EF0C3245F2DFD00E0F70C /* CustomColor.swift */,
+				771EF0C1245F2DE800E0F70C /* CustomTextField.swift */,
+				771EF0BF245F2DD900E0F70C /* CustomButton.swift */,
 			);
 			path = "Авторизация";
 			sourceTree = "<group>";
@@ -145,7 +154,7 @@
 		77A42D18244F8B4400B28172 /* Карта */ = {
 			isa = PBXGroup;
 			children = (
-				77A42D0F244F5ED000B28172 /* MapController.swift */,
+				771EF0CB245F738B00E0F70C /* MapController.swift */,
 			);
 			path = "Карта";
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771EF0CE246027C300E0F70C /* avatar.png in Resources */,
 				7796A16F244EF5C7002FB4FA /* LaunchScreen.storyboard in Resources */,
 				7796A16C244EF5C7002FB4FA /* Assets.xcassets in Resources */,
 				77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */,
@@ -287,14 +297,16 @@
 			files = (
 				77A42D14244F5F3C00B28172 /* ViewController.swift in Sources */,
 				802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */,
+				771EF0C4245F2DFD00E0F70C /* CustomColor.swift in Sources */,
 				802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */,
-				77A42D10244F5ED100B28172 /* MapController.swift in Sources */,
+				771EF0C0245F2DD900E0F70C /* CustomButton.swift in Sources */,
 				802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */,
 				77A42D12244F5EE000B28172 /* ProfileView.swift in Sources */,
-				77A42D21244FA50900B28172 /* Model.swift in Sources */,
+				771EF0CC245F738B00E0F70C /* MapController.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
+				771EF0CA245F6BED00E0F70C /* Model.swift in Sources */,
+				771EF0C2245F2DE800E0F70C /* CustomTextField.swift in Sources */,
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
-				7796A17D244F5448002FB4FA /* BackgroundView.swift in Sources */,
 				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
 				77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */,
 				77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */,

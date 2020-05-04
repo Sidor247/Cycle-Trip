@@ -8,9 +8,11 @@
 
 import UIKit
 import PureLayout
+import PinLayout
+import Firebase
 
 class ProfileView: UIView {
-
+    
     lazy var avatar: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "avatar.png"))
         imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
@@ -41,6 +43,7 @@ class ProfileView: UIView {
         return button
         
     }()
+
     
     override func updateConstraints() {
         avatar.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -68,5 +71,5 @@ class ProfileView: UIView {
         addSubview(avatar)
         addSubview(editButton)
     }
-
+    
 }

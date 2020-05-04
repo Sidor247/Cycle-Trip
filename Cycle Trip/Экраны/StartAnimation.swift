@@ -7,21 +7,40 @@
 //
 
 import UIKit
-
+import Firebase
+import CoreData
 
 class StartAnimation: UIViewController {
     let label = UILabel()
+    var loggedIn = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.present(AuthScreen(), animated: true, completion: nil)
-        }
         view.backgroundColor = .systemPink
         label.font = UIFont(name: "San Francisco", size: 50)
         label.textAlignment = .center
         label.textColor = .white
         label.text = "Анимация"
         view.addSubview(label)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                self.loggedIn = true
+                return }
+            else { self.loggedIn = false
+                   return }
+            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+
+            if self.loggedIn {
+            let tabBar = TabBar()
+            self.present(tabBar, animated: true, completion: nil) }
+        else {
+            let authScreen = AuthScreen()
+            authScreen.modalPresentationStyle = .fullScreen
+            self.show(authScreen, sender: self) }
+        }
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -31,6 +50,8 @@ class StartAnimation: UIViewController {
             .sizeToFit()
     }
 
+
+    
     /*
     // MARK: - Navigation
 

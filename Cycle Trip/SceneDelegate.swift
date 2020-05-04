@@ -21,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let startAnimation = StartAnimation()
-        let user = User()
         window?.rootViewController = startAnimation
         window?.makeKeyAndVisible()
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
