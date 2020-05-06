@@ -125,10 +125,6 @@ class RegistrationView: UIViewController, RegScreenView {
     }
     
     @objc func didTapButtonBack() {
-        let authView = AuthenticationView()
-        
-        authView.modalTransitionStyle = .crossDissolve
-        authView.modalPresentationStyle = .overCurrentContext
-        self.present(authView, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
