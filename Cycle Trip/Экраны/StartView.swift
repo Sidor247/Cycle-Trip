@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import PinLayout
 import CoreData
 
-class StartAnimation: UIViewController {
+class StartView: UIViewController {
     let label = UILabel()
     var loggedIn = false
     override func viewDidLoad() {
@@ -37,9 +38,9 @@ class StartAnimation: UIViewController {
             let tabBar = TabBar()
             self.present(tabBar, animated: true, completion: nil) }
         else {
-            let authScreen = AuthScreen()
+            let authScreen = AuthenticationView()
             authScreen.modalPresentationStyle = .fullScreen
-            self.show(authScreen, sender: self) }
+            self.present(authScreen, animated: true, completion: nil) }
         }
     }
     override func viewDidLayoutSubviews() {

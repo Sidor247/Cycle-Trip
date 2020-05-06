@@ -19,7 +19,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarItem = UITabBarItem(title: "Настройки", image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "settings.fill"))
         configureUI()
     }
 

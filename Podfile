@@ -8,6 +8,8 @@ target 'Cycle Trip' do
   pod 'PinLayout'
   pod 'PureLayout'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'MapboxNavigation', '~> 0.39.0'
 end
