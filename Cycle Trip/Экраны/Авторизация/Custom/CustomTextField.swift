@@ -26,8 +26,9 @@ class CustomTextField: UITextField {
         self.textColor = .black
         self.placeholder = name
         self.layer.cornerRadius = 8
-        self.layer.borderWidth = 2.0
+        self.layer.borderWidth = 0.5
         self.isSecureTextEntry = security
+        self.autocapitalizationType = .none
         self.font = UIFont.systemFont(ofSize: 20)
         self.backgroundColor = CustomColor(color)
         self.layer.borderColor = UIColor.lightGray.cgColor

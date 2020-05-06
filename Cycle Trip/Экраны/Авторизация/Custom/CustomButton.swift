@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import PinLayout
 
 class CustomButton: UIButton {
 
     private var color = UInt()
     private var title = String()
     private var background = UInt()
+    
+    private var loading = UIActivityIndicatorView()
     
     convenience init(color: UInt, background: UInt, title: String) {
         self.init(type: .custom)
@@ -39,5 +42,20 @@ class CustomButton: UIButton {
                 self.setTitleColor(CustomColor(self.color).withAlphaComponent(self.isHighlighted ? 0.3 : 1), for: .normal)
             })
         }
+    }
+    
+    func loadingStart() {
+        self.setTitle("", for: .normal)
+        self.addSubview(loading)
+        loading.startAnimating()
+        loading.isHidden = false
+        loading.pin.center()
+    }
+    
+    func loadingStop() {
+        self.setTitle(title, for: .normal)
+        loading.removeFromSuperview()
+        loading.stopAnimating()
+        loading.isHidden = true
     }
 }
