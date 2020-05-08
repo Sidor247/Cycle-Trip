@@ -12,6 +12,8 @@ private let reuseIdentifier = "SettingsCell"
 
 //@available(iOS 13.0, *)
 class ViewController: UIViewController {
+
+    
     
     
     var tableView: UITableView!
@@ -122,12 +124,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch section {
         case .Social:
-            print(SocialOptions(rawValue: indexPath.row)?.description as Any)
-         case .Information:
+            if SocialOptions(rawValue: indexPath.row)!.rawValue == 2
+            {
+                let alert = UIAlertController(title: "Вы уверены, что хотите выйти?", message: "", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Продолжить", style: .default, handler:{(action) in self.logout()}))
+                    alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler:{ action in }))
+                    self.present(alert, animated: true, completion: nil)
+            }
+            else
+            {
+                print(SocialOptions(rawValue: indexPath.row)?.description as Any)
+            }
+        case .Information:
             print(InformationOptions(rawValue: indexPath.row)?.description as Any)
         case .Communications:
             print(CommunicationOptions(rawValue: indexPath.row)?.description as Any)
         }
+    }
+    func logout(){
+    let regView = AuthenticationView()
+    
+    regView.modalTransitionStyle = .crossDissolve
+    regView.modalPresentationStyle = .overCurrentContext
+    self.present(regView, animated: true, completion: nil)
     }
 
 }
