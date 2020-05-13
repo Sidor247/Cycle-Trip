@@ -8,38 +8,95 @@
 
 import Foundation
 import Firebase
+import FBSDKLoginKit
 
 protocol AuthScreenView: class {
-    func setState(transation: Bool)
+    func processingResult(error: String?)
 }
 
-protocol AuthScreenViewPresenter {
-    init(view: AuthScreenView, email: String, password: String)
-    func showState()
+protocol AuthScreenPresenter {
+    init(view: AuthScreenView, email: String?, password: String?)
+    func dataProcessingFB()
+    func dataProcessing()
 }
 
-class AuthPresenter: AuthScreenViewPresenter {
-    
+class AuthPresenter: AuthScreenPresenter {
     unowned let view: AuthScreenView
-    let password: String
-    let email: String
+    let password: String?
+    let email: String?
     
-    required init(view: AuthScreenView, email: String, password: String) {
+    required init(view: AuthScreenView, email: String?, password: String?) {
         self.password = password
         self.email = email
         self.view = view
     }
     
-    func showState() {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error) in
-            guard error == nil, user != nil else {
-                self?.view.setState(transation: false)
-                print("Error")
+    func dataProcessingFB() {
+        let login = LoginManager()
+        let permissions = ["public_profile", "email"]
+
+        if AccessToken.current != nil {
+            login.logOut()
+        }
+        
+        login.logIn(permissions: permissions, from: (self.view as? UIViewController)) { [weak self] (result, error) in
+            guard error == nil, result?.isCancelled == false else {
+                print(error?.localizedDescription as Any)
                 return
             }
             
-            self?.view.setState(transation: true)
+            GraphRequest(graphPath: "me", parameters: ["fields":"email,last_name,first_name,picture"], tokenString: AccessToken.current?.tokenString, version: nil, httpMethod: HTTPMethod(rawValue: "GET")).start { (connector, result, error) in
+                guard error == nil, let values = result as? [String: AnyHashable] else {
+                    print(error?.localizedDescription as Any)
+                    self?.view.processingResult(error: CauseOfError.serverError.localizedDescription)
+                    return
+                }
+                
+                self?.fillingTheDatabase(data: values)
+                
+                let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+                Auth.auth().signIn(with: credential) { (user, error) in
+                    guard error == nil else {
+                        self?.view.processingResult(error: CauseOfError.invalidEmail.localizedDescription)
+                        return
+                    }
+        
+                    self?.view.processingResult(error: nil)
+                }
+            }
         }
     }
+    
+    func dataProcessing() {
+        guard let email = self.email, let password = self.password else {
+            self.view.processingResult(error: CauseOfError.loginOrPassword.localizedDescription)
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error) in
+            if let error = error {
+                self?.view.processingResult(error: CauseOfError.loginOrPassword.localizedDescription)
+                print(error.localizedDescription)
+                return
+            }
+            
+            self?.view.processingResult(error: nil)
+        }
+    }
+    
+    func fillingTheDatabase(data: [String: AnyHashable]) {
+        let ref = Database.database().reference().child("users")
+        let user = Auth.auth().currentUser
+        
+        guard user?.metadata.lastSignInDate == nil, let uid = user?.uid else {
+            return
+        }
+        ref.child(uid).updateChildValues(data, withCompletionBlock: { (error, ref) in
+             guard error == nil else {
+                print(error as Any)
+                 return
+             }
+             print("Save the user successfully into Firebase database")
+         })
+    }
 }
-

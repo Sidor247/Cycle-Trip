@@ -9,7 +9,7 @@ target 'Cycle Trip' do
   pod 'PureLayout'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
+  pod 'FBSDKLoginKit'
   pod 'MapboxNavigation', '~> 0.39.0'
 end

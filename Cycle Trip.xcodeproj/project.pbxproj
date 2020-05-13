@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		770D68462462DC80009855EC /* RegPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68392462DC80009855EC /* RegPresenter.swift */; };
-		770D68472462DC80009855EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683A2462DC80009855EC /* NetworkManager.swift */; };
 		770D68482462DC80009855EC /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683B2462DC80009855EC /* AuthPresenter.swift */; };
-		770D68492462DC80009855EC /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683C2462DC80009855EC /* Builder.swift */; };
 		770D684A2462DC80009855EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683E2462DC80009855EC /* User.swift */; };
 		770D684B2462DC80009855EC /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68402462DC80009855EC /* RegistrationView.swift */; };
 		770D684C2462DC80009855EC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68412462DC80009855EC /* AuthenticationView.swift */; };
@@ -26,7 +24,7 @@
 		7796A16F244EF5C7002FB4FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7796A16D244EF5C7002FB4FA /* LaunchScreen.storyboard */; };
 		7796A179244F2937002FB4FA /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A178244F2937002FB4FA /* TabBar.swift */; };
 		77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1C244F8D0400B28172 /* ChatVC.swift */; };
-		77A42D1F244F8DB100B28172 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* StartView.swift */; };
+		77A42D1F244F8DB100B28172 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* AnimatedView.swift */; };
 		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
 		77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1351246184F30084966B /* UserInfoHeader.swift */; };
 		77FE1356246184F30084966B /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1352246184F30084966B /* SettingsSection.swift */; };
@@ -36,15 +34,18 @@
 		802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAB2455E33800CF04DC /* CustomImageView.swift */; };
 		802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAD2455EC6800CF04DC /* ChatAPI.swift */; };
 		802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */; };
+		933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */; };
+		9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */; };
+		9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */; };
+		93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2E9924676B6000472553 /* AnimatedPresenter.swift */; };
+		93AD2E9C246815E400472553 /* CauseOfError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2E9B246815E400472553 /* CauseOfError.swift */; };
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A73373274DAE35948469F86 /* Pods-Cycle Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.release.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.release.xcconfig"; sourceTree = "<group>"; };
 		770D68392462DC80009855EC /* RegPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegPresenter.swift; sourceTree = "<group>"; };
-		770D683A2462DC80009855EC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		770D683B2462DC80009855EC /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
-		770D683C2462DC80009855EC /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		770D683E2462DC80009855EC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		770D68402462DC80009855EC /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		770D68412462DC80009855EC /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -62,7 +63,7 @@
 		7796A170244EF5C7002FB4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7796A178244F2937002FB4FA /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		77A42D1C244F8D0400B28172 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
-		77A42D1E244F8DB100B28172 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		77A42D1E244F8DB100B28172 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77FE1351246184F30084966B /* UserInfoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
 		77FE1352246184F30084966B /* SettingsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
@@ -73,6 +74,11 @@
 		802FCEAD2455EC6800CF04DC /* ChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
 		802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCwithConnection.swift; sourceTree = "<group>"; };
 		8E5AC258D60FE5AFD838BEB1 /* Pods-Cycle Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.debug.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.debug.xcconfig"; sourceTree = "<group>"; };
+		933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringTimingParameters.swift; sourceTree = "<group>"; };
+		9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		93AD2E9924676B6000472553 /* AnimatedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPresenter.swift; sourceTree = "<group>"; };
+		93AD2E9B246815E400472553 /* CauseOfError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CauseOfError.swift; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,10 +106,9 @@
 		770D68372462DC80009855EC /* Авторизация */ = {
 			isa = PBXGroup;
 			children = (
-				770D68382462DC80009855EC /* Presenter */,
-				770D683C2462DC80009855EC /* Builder.swift */,
 				770D683D2462DC80009855EC /* Model */,
 				770D683F2462DC80009855EC /* View */,
+				770D68382462DC80009855EC /* Presenter */,
 				770D68422462DC80009855EC /* Custom */,
 			);
 			path = "Авторизация";
@@ -112,9 +117,10 @@
 		770D68382462DC80009855EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				93AD2E9924676B6000472553 /* AnimatedPresenter.swift */,
 				770D68392462DC80009855EC /* RegPresenter.swift */,
-				770D683A2462DC80009855EC /* NetworkManager.swift */,
 				770D683B2462DC80009855EC /* AuthPresenter.swift */,
+				9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -130,8 +136,10 @@
 		770D683F2462DC80009855EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77A42D1E244F8DB100B28172 /* AnimatedView.swift */,
 				770D68402462DC80009855EC /* RegistrationView.swift */,
 				770D68412462DC80009855EC /* AuthenticationView.swift */,
+				9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +147,8 @@
 		770D68422462DC80009855EC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */,
+				93AD2E9B246815E400472553 /* CauseOfError.swift */,
 				770D68432462DC80009855EC /* CustomColor.swift */,
 				770D68442462DC80009855EC /* CustomButton.swift */,
 				770D68452462DC80009855EC /* CustomTextField.swift */,
@@ -187,7 +197,6 @@
 				7796A177244F2418002FB4FA /* Профиль */,
 				77A42D18244F8B4400B28172 /* Карта */,
 				7796A178244F2937002FB4FA /* TabBar.swift */,
-				77A42D1E244F8DB100B28172 /* StartView.swift */,
 			);
 			path = "Экраны";
 			sourceTree = "<group>";
@@ -243,7 +252,7 @@
 				7796A158244EF5C4002FB4FA /* Sources */,
 				7796A159244EF5C4002FB4FA /* Frameworks */,
 				7796A15A244EF5C4002FB4FA /* Resources */,
-				582C33AC965C47C8B28A64D3 /* [CP] Embed Pods Frameworks */,
+				A6C8755B2900315AA19A829E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,7 +333,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		582C33AC965C47C8B28A64D3 /* [CP] Embed Pods Frameworks */ = {
+		A6C8755B2900315AA19A829E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,23 +359,26 @@
 			files = (
 				802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */,
 				77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */,
-				770D68492462DC80009855EC /* Builder.swift in Sources */,
 				770D684B2462DC80009855EC /* RegistrationView.swift in Sources */,
 				802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */,
 				770D68462462DC80009855EC /* RegPresenter.swift in Sources */,
 				770D68482462DC80009855EC /* AuthPresenter.swift in Sources */,
 				802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */,
+				93AD2E9C246815E400472553 /* CauseOfError.swift in Sources */,
 				77FE1356246184F30084966B /* SettingsSection.swift in Sources */,
+				9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */,
 				770D684F2462DC80009855EC /* CustomTextField.swift in Sources */,
 				770D684A2462DC80009855EC /* User.swift in Sources */,
+				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
 				771EF0CC245F738B00E0F70C /* MapController.swift in Sources */,
+				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
+				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
 				77FE1358246184F30084966B /* ViewController.swift in Sources */,
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
-				770D68472462DC80009855EC /* NetworkManager.swift in Sources */,
 				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
 				77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */,
-				77A42D1F244F8DB100B28172 /* StartView.swift in Sources */,
+				77A42D1F244F8DB100B28172 /* AnimatedView.swift in Sources */,
 				770D684C2462DC80009855EC /* AuthenticationView.swift in Sources */,
 				7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */,
 				770D684E2462DC80009855EC /* CustomButton.swift in Sources */,

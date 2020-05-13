@@ -27,14 +27,14 @@ class CustomTextField: UITextField {
         self.placeholder = name
         self.layer.cornerRadius = 8
         self.layer.borderWidth = 0.5
+        self.autocorrectionType = .no
+        self.clearButtonMode = .always
         self.isSecureTextEntry = security
         self.autocapitalizationType = .none
         self.font = UIFont.systemFont(ofSize: 20)
         self.backgroundColor = CustomColor(color)
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
-        self.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: self.frame.height))
         self.leftViewMode = .always
-        self.rightViewMode = .always
     }
 }

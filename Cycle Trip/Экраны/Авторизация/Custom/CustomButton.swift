@@ -35,11 +35,22 @@ class CustomButton: UIButton {
     
     override var isHighlighted: Bool {
         didSet {
-            guard let color = backgroundColor else { return }
+            guard let background = backgroundColor, let color = titleColor(for: self.state) else { return }
 
             UIView.animate(withDuration: self.isHighlighted ? 0 : 0.4, delay: 0.0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {
-                self.backgroundColor = color.withAlphaComponent(self.isHighlighted ? 0.3 : 1)
-                self.setTitleColor(CustomColor(self.color).withAlphaComponent(self.isHighlighted ? 0.3 : 1), for: .normal)
+                self.backgroundColor = background.withAlphaComponent(self.isHighlighted ? 0.3 : 1)
+                self.setTitleColor(color.withAlphaComponent(self.isHighlighted ? 0.3 : 1), for: .normal)
+            })
+        }
+    }
+    
+    override var isUserInteractionEnabled: Bool {
+        didSet {
+            guard let background = backgroundColor, let color = titleColor(for: self.state) else { return }
+
+            UIView.animate(withDuration: self.isUserInteractionEnabled ? 0.0 : 0, delay: 0.0, options: [.beginFromCurrentState], animations: {
+                self.backgroundColor = background.withAlphaComponent(self.isUserInteractionEnabled ? 1 : 0.3)
+                self.setTitleColor(color.withAlphaComponent(self.isUserInteractionEnabled ? 1 : 0.3), for: .normal)
             })
         }
     }

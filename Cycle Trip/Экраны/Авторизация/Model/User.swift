@@ -14,15 +14,14 @@ struct User {
     let password: String
     let lastName: String
     let firstName: String
-
-    let ref: DatabaseReference?
-
-    init(email: String, password: String, lastName: String, firstName: String) {
+    let imageURL: String?
+    
+    init(email: String, password: String, lastName: String, firstName: String, imageURL: String?) {
         self.email = email
         self.password = password
         self.lastName = lastName
         self.firstName = firstName
-        self.ref = nil
+        self.imageURL = imageURL
     }
 
     init(snapshot: DataSnapshot) {
@@ -31,10 +30,10 @@ struct User {
         password = snapshotValue["password"] as! String
         lastName = snapshotValue["lastName"] as! String
         firstName = snapshotValue["firstName"] as! String
-        ref = snapshotValue["ref"] as? DatabaseReference
+        imageURL = snapshotValue["imageURL"] as? String
     }
     
     func convertToDictionary() -> [AnyHashable : Any] {
-        return ["email": email, "password": password, "lastName": lastName, "firstName": firstName]
+        return ["email": email, "lastName": lastName, "firstName": firstName, "imageURL": imageURL as Any]
     }
 }
