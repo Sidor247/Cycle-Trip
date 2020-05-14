@@ -15,7 +15,6 @@
 		770D684D2462DC80009855EC /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68432462DC80009855EC /* CustomColor.swift */; };
 		770D684E2462DC80009855EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68442462DC80009855EC /* CustomButton.swift */; };
 		770D684F2462DC80009855EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68452462DC80009855EC /* CustomTextField.swift */; };
-		771EF0CC245F738B00E0F70C /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF0CB245F738B00E0F70C /* MapController.swift */; };
 		771EF0CE246027C300E0F70C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 771EF0CD246027C300E0F70C /* avatar.png */; };
 		7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A15F244EF5C4002FB4FA /* AppDelegate.swift */; };
 		7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A161244EF5C4002FB4FA /* SceneDelegate.swift */; };
@@ -26,6 +25,9 @@
 		77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1C244F8D0400B28172 /* ChatVC.swift */; };
 		77A42D1F244F8DB100B28172 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* AnimatedView.swift */; };
 		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
+		77D271CA246DCCF700DCEB1D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C7246DCCF700DCEB1D /* MapVC.swift */; };
+		77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C8246DCCF700DCEB1D /* MapModel.swift */; };
+		77D271CC246DCCF700DCEB1D /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C9246DCCF700DCEB1D /* MapPresenter.swift */; };
 		77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1351246184F30084966B /* UserInfoHeader.swift */; };
 		77FE1356246184F30084966B /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1352246184F30084966B /* SettingsSection.swift */; };
 		77FE1357246184F30084966B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1353246184F30084966B /* SettingsCell.swift */; };
@@ -52,7 +54,6 @@
 		770D68432462DC80009855EC /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		770D68442462DC80009855EC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		770D68452462DC80009855EC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		771EF0CB245F738B00E0F70C /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		771EF0CD246027C300E0F70C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		7796A15C244EF5C4002FB4FA /* Cycle Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cycle Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7796A15F244EF5C4002FB4FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		77A42D1C244F8D0400B28172 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		77A42D1E244F8DB100B28172 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77D271C7246DCCF700DCEB1D /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		77D271C8246DCCF700DCEB1D /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		77D271C9246DCCF700DCEB1D /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		77FE1351246184F30084966B /* UserInfoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
 		77FE1352246184F30084966B /* SettingsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		77FE1353246184F30084966B /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
@@ -216,7 +220,9 @@
 		77A42D18244F8B4400B28172 /* Карта */ = {
 			isa = PBXGroup;
 			children = (
-				771EF0CB245F738B00E0F70C /* MapController.swift */,
+				77D271C8246DCCF700DCEB1D /* MapModel.swift */,
+				77D271C9246DCCF700DCEB1D /* MapPresenter.swift */,
+				77D271C7246DCCF700DCEB1D /* MapVC.swift */,
 			);
 			path = "Карта";
 			sourceTree = "<group>";
@@ -370,10 +376,11 @@
 				770D684F2462DC80009855EC /* CustomTextField.swift in Sources */,
 				770D684A2462DC80009855EC /* User.swift in Sources */,
 				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
-				771EF0CC245F738B00E0F70C /* MapController.swift in Sources */,
 				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
+				77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
+				77D271CC246DCCF700DCEB1D /* MapPresenter.swift in Sources */,
 				77FE1358246184F30084966B /* ViewController.swift in Sources */,
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
 				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
@@ -383,6 +390,7 @@
 				7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */,
 				770D684E2462DC80009855EC /* CustomButton.swift in Sources */,
 				770D684D2462DC80009855EC /* CustomColor.swift in Sources */,
+				77D271CA246DCCF700DCEB1D /* MapVC.swift in Sources */,
 				77FE1357246184F30084966B /* SettingsCell.swift in Sources */,
 				7796A179244F2937002FB4FA /* TabBar.swift in Sources */,
 			);

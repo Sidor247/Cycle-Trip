@@ -16,11 +16,11 @@ class TabBar: UITabBarController {
         modalPresentationStyle = .fullScreen
         let viewController = ViewController()
         let chatVC = ChatVC()
-        let mapController = MapController()
+        let mapVC = MapVC()
         viewController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person") , selectedImage: UIImage(systemName: "person.fill"))
-        mapController.tabBarItem = UITabBarItem(title: "Карта", image: UIImage(systemName: "map") , selectedImage: UIImage(systemName: "map.fill"))
+        mapVC.tabBarItem = UITabBarItem(title: "Карта", image: UIImage(systemName: "map") , selectedImage: UIImage(systemName: "map.fill"))
         chatVC.tabBarItem = UITabBarItem(title: "Чат", image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "message.fill"))
-        viewControllers = [chatVC, mapController, viewController]
+        viewControllers = [chatVC, mapVC, viewController]
         selectedIndex = 1
 
         // Do any additional setup after loading the view.
