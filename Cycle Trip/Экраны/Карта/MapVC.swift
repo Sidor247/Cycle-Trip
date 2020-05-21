@@ -18,6 +18,7 @@ class MapVC: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var presenter: MapPresenter!
     var coordinates = [CLLocationCoordinate2D]()
+    var startButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,7 @@ class MapVC: UIViewController, MGLMapViewDelegate {
         
         // Set the map view's delegate
         mapView.delegate = self
+        mapView.styleURL = URL(string: "mapbox://styles/sid0r247/ck95uvmu95fhz1ioahpaf3n0t")
         
         // Allow the map to display the user's location
         mapView.showsUserLocation = true
@@ -40,6 +42,32 @@ class MapVC: UIViewController, MGLMapViewDelegate {
         // Add a gesture recognizer to the map view
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)
+        
+        startButton = UIButton()
+        startButton.setTitle("Создать событие", for: .normal)
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.backgroundColor = .blue
+        startButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        startButton.addTarget(self, action: #selector(tappedButton(sender:)), for: .touchUpInside)
+        startButton.isHidden = true
+        view.addSubview(startButton!)
+        startButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        startButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        view.setNeedsLayout()
+    }
+    
+    override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    startButton?.layer.cornerRadius = startButton!.bounds.midY
+    startButton?.clipsToBounds = true
+    startButton?.setNeedsDisplay()
+     
+    }
+    
+    @objc func tappedButton(sender: UIButton) {
+        let eventCreation = NavVC()
+        eventCreation.modalPresentationStyle = .fullScreen
+        present(eventCreation, animated: true, completion: nil)
     }
     
     @objc func didLongPress(_ sender: UILongPressGestureRecognizer) {
@@ -48,6 +76,7 @@ class MapVC: UIViewController, MGLMapViewDelegate {
         // Converts point where user did a long press to map coordinates
         let point = sender.location(in: mapView)
         let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
+        startButton.isHidden = false
         presenter.longPress(coordinate: coordinate)
     }
     
@@ -59,7 +88,7 @@ class MapVC: UIViewController, MGLMapViewDelegate {
     
     // Present the navigation view controller when the callout is selected
     func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
-        let navigationViewController = NavigationViewController(for: presenter.model.directionsRoute!)
+        let navigationViewController = NavigationViewController(for: presenter.directionsRoute!)
         navigationViewController.modalPresentationStyle = .fullScreen
         self.present(navigationViewController, animated: true, completion: nil)
     }

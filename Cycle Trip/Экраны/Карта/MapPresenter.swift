@@ -16,6 +16,30 @@ class MapPresenter {
     var model: MapModel
     var mapView: NavigationMapView!
     var coordinates = [CLLocationCoordinate2D]()
+    var directionsRoute: Route?
+    func calculateRoute(coordinates: [CLLocationCoordinate2D],
+                        completion: @escaping (Route?, Error?) -> ()) {
+        
+        // Coordinate accuracy is the maximum distance away from the waypoint that the route may still be considered viable, measured in meters. Negative values indicate that a indefinite number of meters away from the route and still be considered viable.
+        var points = [Waypoint]()
+        points.append(Waypoint(coordinate: coordinates[0], coordinateAccuracy: -1, name: "Start"))
+        for i in 1..<coordinates.count-1 {
+            points.append(Waypoint(coordinate: coordinates[i], coordinateAccuracy: -1, name: "Waypoint"))
+        }
+        points.append(Waypoint(coordinate: coordinates[coordinates.count-1], coordinateAccuracy: -1, name: "Finish"))
+        
+        // Specify that the route is intended for automobiles avoiding traffic
+        let options = NavigationRouteOptions(waypoints: points, profileIdentifier: .walking)
+        
+        // Generate the route object and draw it on the map
+        Directions.shared.calculate(options) { [unowned self] (waypoints, routes, error) in
+            guard error == nil else { print(error!.localizedDescription); return}
+            self.directionsRoute = routes?.first
+            // Draw the route on the map after creating it
+            self.drawRoute(route: self.directionsRoute!)
+        }
+
+    }
     init(mapView: NavigationMapView, model: MapModel) {
         self.mapView = mapView
         self.model = model
@@ -31,7 +55,7 @@ class MapPresenter {
         
         // Calculate the route from the user's location to the set destination
         if coordinates.count > 1 {
-            model.calculateRoute(coordinates: self.coordinates) { (route, error) in
+            calculateRoute(coordinates: self.coordinates) { (route, error) in
                 if error != nil {
                     print("Error calculating route") }
             }
@@ -52,7 +76,7 @@ class MapPresenter {
             
             // Customize the route line color and width
             let lineStyle = MGLLineStyleLayer(identifier: "route-style", source: source)
-            lineStyle.lineColor = NSExpression(forConstantValue: #colorLiteral(red: 0.1897518039, green: 0.3010634184, blue: 0.7994888425, alpha: 1))
+            lineStyle.lineColor = NSExpression(forConstantValue: #colorLiteral(red: 0.9333333333, green: 0.6431372549, blue: 0.6549019608, alpha: 1))
             lineStyle.lineWidth = NSExpression(forConstantValue: 3)
             
             // Add the source and style layer of the route line to the map
@@ -60,6 +84,7 @@ class MapPresenter {
             mapView.style?.addLayer(lineStyle)
         }
     }
+    
     func annotationBuilder(title: String, imageName: String, coordinate: CLLocationCoordinate2D) {
 //        // Create a basic point annotation and add it to the map
 //        let annotation = MGLPointAnnotation()
