@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Cycle Trip
+//  NavVC.swift
+//  MapTesting
 //
 //  Created by Igor Lebedev on 19/05/2020.
 //  Copyright © 2020 Прогеры. All rights reserved.
@@ -13,7 +13,7 @@ class NavVC: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableVC = TableVC()
-        tableVC.title = " Создать"
+        tableVC.title = "Создать"
         viewControllers = [tableVC]
         tableVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped(sender:)))
         tableVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(cancelTapped(sender:)))

@@ -18,7 +18,16 @@ class MapVC: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var presenter: MapPresenter!
     var coordinates = [CLLocationCoordinate2D]()
-    var startButton: UIButton!
+    var startButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Создать событие", for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.backgroundColor = .blue
+        btn.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        btn.addTarget(self, action: #selector(tappedButton(sender:)), for: .touchUpInside)
+        btn.isHidden = true
+        return btn
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,25 +51,15 @@ class MapVC: UIViewController, MGLMapViewDelegate {
         // Add a gesture recognizer to the map view
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)
-        
-        startButton = UIButton()
-        startButton.setTitle("Создать событие", for: .normal)
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        startButton.backgroundColor = .blue
-        startButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        startButton.addTarget(self, action: #selector(tappedButton(sender:)), for: .touchUpInside)
-        startButton.isHidden = true
-        view.addSubview(startButton!)
+        view.addSubview(startButton)
         startButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         startButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        view.setNeedsLayout()
     }
     
     override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    startButton?.layer.cornerRadius = startButton!.bounds.midY
-    startButton?.clipsToBounds = true
-    startButton?.setNeedsDisplay()
+    startButton.layer.cornerRadius = startButton.bounds.midY
+    startButton.clipsToBounds = true
      
     }
     
