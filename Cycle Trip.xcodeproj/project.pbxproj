@@ -25,6 +25,10 @@
 		77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1C244F8D0400B28172 /* ChatVC.swift */; };
 		77A42D1F244F8DB100B28172 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A42D1E244F8DB100B28172 /* AnimatedView.swift */; };
 		77A702F52451664300167E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A702F42451664300167E5F /* GoogleService-Info.plist */; };
+		77B2901B2477F66C008CB507 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B290172477F66B008CB507 /* TableVC.swift */; };
+		77B2901C2477F66C008CB507 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B290182477F66B008CB507 /* CustomCell.swift */; };
+		77B2901D2477F66C008CB507 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B290192477F66B008CB507 /* Event.swift */; };
+		77B2901E2477F66C008CB507 /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2901A2477F66C008CB507 /* NavVC.swift */; };
 		77D271CA246DCCF700DCEB1D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C7246DCCF700DCEB1D /* MapVC.swift */; };
 		77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C8246DCCF700DCEB1D /* MapModel.swift */; };
 		77D271CC246DCCF700DCEB1D /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C9246DCCF700DCEB1D /* MapPresenter.swift */; };
@@ -66,6 +70,10 @@
 		77A42D1C244F8D0400B28172 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		77A42D1E244F8DB100B28172 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		77A702F42451664300167E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77B290172477F66B008CB507 /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		77B290182477F66B008CB507 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		77B290192477F66B008CB507 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		77B2901A2477F66C008CB507 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		77D271C7246DCCF700DCEB1D /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		77D271C8246DCCF700DCEB1D /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		77D271C9246DCCF700DCEB1D /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 		7796A176244F23E8002FB4FA /* Экраны */ = {
 			isa = PBXGroup;
 			children = (
+				77B290102477F606008CB507 /* Создание маршрута */,
 				770D68372462DC80009855EC /* Авторизация */,
 				77A42D19244F8BE400B28172 /* Чат */,
 				7796A177244F2418002FB4FA /* Профиль */,
@@ -237,6 +246,18 @@
 				802FCEAD2455EC6800CF04DC /* ChatAPI.swift */,
 			);
 			path = "Чат";
+			sourceTree = "<group>";
+		};
+		77B290102477F606008CB507 /* Создание маршрута */ = {
+			isa = PBXGroup;
+			children = (
+				77B290182477F66B008CB507 /* CustomCell.swift */,
+				77B290192477F66B008CB507 /* Event.swift */,
+				77B2901A2477F66C008CB507 /* NavVC.swift */,
+				77B290172477F66B008CB507 /* TableVC.swift */,
+			);
+			name = "Создание маршрута";
+			path = "Профиль/Создание маршрута";
 			sourceTree = "<group>";
 		};
 		98F70E30CE4FC16987554575 /* Frameworks */ = {
@@ -364,22 +385,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */,
+				77B2901D2477F66C008CB507 /* Event.swift in Sources */,
 				77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */,
 				770D684B2462DC80009855EC /* RegistrationView.swift in Sources */,
 				802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */,
 				770D68462462DC80009855EC /* RegPresenter.swift in Sources */,
 				770D68482462DC80009855EC /* AuthPresenter.swift in Sources */,
+				77B2901C2477F66C008CB507 /* CustomCell.swift in Sources */,
 				802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */,
 				93AD2E9C246815E400472553 /* CauseOfError.swift in Sources */,
 				77FE1356246184F30084966B /* SettingsSection.swift in Sources */,
 				9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */,
 				770D684F2462DC80009855EC /* CustomTextField.swift in Sources */,
+				77B2901B2477F66C008CB507 /* TableVC.swift in Sources */,
 				770D684A2462DC80009855EC /* User.swift in Sources */,
 				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
 				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
 				77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
+				77B2901E2477F66C008CB507 /* NavVC.swift in Sources */,
 				77D271CC246DCCF700DCEB1D /* MapPresenter.swift in Sources */,
 				77FE1358246184F30084966B /* ViewController.swift in Sources */,
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
