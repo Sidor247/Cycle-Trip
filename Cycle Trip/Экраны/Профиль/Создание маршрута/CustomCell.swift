@@ -8,7 +8,7 @@
 
 import UIKit
 import PinLayout
-class CustomCell: UITableViewCell {
+final class CustomCell: UITableViewCell {
     var icon: UIImageView = {
        let imgView = UIImageView()
        imgView.contentMode = .scaleAspectFit
@@ -17,8 +17,6 @@ class CustomCell: UITableViewCell {
     }()
     
     var formatter: DateFormatter!
-    
-    var picker: UIDatePicker!
     
     var textField: UITextField = {
         let tf = UITextField()
@@ -35,25 +33,19 @@ class CustomCell: UITableViewCell {
         textField.pin.after(of: icon, aligned: .center).right().height(40).marginHorizontal(10)
     }
     
-    func myCell(placeholder: String, iconName: String, picker: UIDatePicker?, format: String?) {
+    convenience init(iconName: String) {
+        self.init(style: .default, reuseIdentifier: "Cell")
         icon.image = UIImage(systemName: iconName)
-        textField.placeholder = placeholder
-        if picker != nil {
-            self.picker = picker
-            textField.inputView = picker
-            self.picker.addTarget(self, action: #selector(valueChanged(sender:)), for: .valueChanged)
-        }
-        if format != nil {
-            formatter = DateFormatter()
-            formatter.dateFormat = format
-        }
-        }
-        
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func valueChanged(sender:UIDatePicker) {
-        textField.text = formatter.string(from: sender.date)
+    func makeCell(picker: UIDatePicker, format: String) {
+        formatter = DateFormatter()
+        formatter.dateFormat = format
+        textField.inputView = picker
+        textField.placeholder = formatter.string(from: picker.date)
     }
         
 }

@@ -8,22 +8,26 @@
 
 import UIKit
 
-class NavVC: UINavigationController {
-    var tableVC: TableVC!
+final class NavVC: UINavigationController {
+    private var tableVC: TableVC!
+    var presenter: MapPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableVC = TableVC()
-        tableVC.title = "Создать"
+        tableVC = TableVC(style: .grouped)
         viewControllers = [tableVC]
+        tableVC.title = "Создать"
         tableVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped(sender:)))
-        tableVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(cancelTapped(sender:)))
-        
-        
-        // Do any additional setup after loading the view.
+        tableVC.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped(sender:)))
     }
-    @objc func cancelTapped(sender: UIBarButtonItem) {
+    @objc private func cancelTapped(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    @objc private func saveTapped(sender: UIBarButtonItem) {
+        presenter.createEvent(name:tableVC.name, date:tableVC.date)
+        tableVC.view.endEditing(true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 
     /*

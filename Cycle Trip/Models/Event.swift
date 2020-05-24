@@ -7,7 +7,11 @@
 //
 
 import Foundation
-
+import Firebase
+import Mapbox
 struct Event {
+    var name: String
     var date: Date
+    var startPoint: CLLocationCoordinate2D
+    
 }

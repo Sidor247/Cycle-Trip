@@ -8,62 +8,113 @@
 
 import UIKit
 
-class TableVC: UITableViewController {
-    var eventDate = NSDate.now
-    let datePicker: UIDatePicker = {
+final class TableVC: UITableViewController {
+    var name: String  {
+        let name = nameCell.textField.text
+        if name != "" {
+            return name!
+        }
+        else {
+            return "Название"
+        }
+    }
+    var date: Date = NSDate.now
+    private let nameCell = CustomCell(iconName: "pencil")
+    private let dateCell = CustomCell(iconName: "calendar")
+    private let timeCell = CustomCell(iconName: "clock")
+    
+    private let datePicker: UIDatePicker = {
         let dp = UIDatePicker()
         dp.datePickerMode = .date
         dp.minimumDate = NSDate.now
         return dp
     }()
-    let timePicker: UIDatePicker = {
+    
+    private let timePicker: UIDatePicker = {
         let dp = UIDatePicker()
         dp.datePickerMode = .time
         dp.minimumDate = NSDate.now
         return dp
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDone))
         view.addGestureRecognizer(tapGesture)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CustomCell.self, forCellReuseIdentifier: "Cell")
+        configureCells()
     }
     
     
     
-    @objc func tapGestureDone() {
+    @objc private func tapGestureDone() {
         view.endEditing(true)
+        
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        switch section {
+        case 0: return 1
+        case 1: return 2
+        default: fatalError("Unknown section")
+        }
     }
-
+    
+    override func tableView(_: UITableView, titleForHeaderInSection: Int) -> String?{
+        switch(titleForHeaderInSection) {
+        case 0: return "Чат"
+        case 1: return "Дата и время"
+        default: fatalError("Unknown section")
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
-        switch indexPath.row {
+        var cell: CustomCell!
+        switch(indexPath.section) {
+        case 0:
+            switch indexPath.row {
             case 0:
-                cell.myCell(placeholder: "Название", iconName: "pencil" , picker: nil, format: nil)
+                cell = nameCell
+            default: fatalError("Unknown row in section 0")
+            }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                cell = dateCell
             case 1:
-                cell.myCell(placeholder: "", iconName: "calendar" , picker: datePicker, format: "E, d MMM yyyy")
-                
-            case 2:
-                cell.myCell(placeholder: "", iconName: "clock" , picker: timePicker, format: "HH:mm")
-            default:
-                print("ы")
+                cell = timeCell
+            default: fatalError("Unknown row in section 0")
+            }
+        default:
+            fatalError("Unknown row in section 0")
         }
         return cell
     }
+    private func configureCells() {
+        nameCell.textField.placeholder = "Название"
+        datePicker.addTarget(self, action: #selector(dateChanged(sender:)), for: .valueChanged)
+        timePicker.addTarget(self, action: #selector(timeChanged), for: .valueChanged)
+        dateCell.makeCell(picker: datePicker, format: "E, d MMM yyyy")
+        timeCell.makeCell(picker: timePicker, format: "HH:mm")
+    }
+    @objc private func dateChanged(sender: UIDatePicker) {
+        let date = sender.date
+        dateCell.textField.text = dateCell.formatter.string(from: date)
+        self.date = date
+    }
+    @objc private func timeChanged(sender: UIDatePicker) {
+        let date = sender.date
+        timeCell.textField.text = timeCell.formatter.string(from: date)
+        self.date = date
+    }
+    
 
 
     /*

@@ -30,7 +30,6 @@
 		77B2901D2477F66C008CB507 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B290192477F66B008CB507 /* Event.swift */; };
 		77B2901E2477F66C008CB507 /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2901A2477F66C008CB507 /* NavVC.swift */; };
 		77D271CA246DCCF700DCEB1D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C7246DCCF700DCEB1D /* MapVC.swift */; };
-		77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C8246DCCF700DCEB1D /* MapModel.swift */; };
 		77D271CC246DCCF700DCEB1D /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D271C9246DCCF700DCEB1D /* MapPresenter.swift */; };
 		77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1351246184F30084966B /* UserInfoHeader.swift */; };
 		77FE1356246184F30084966B /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE1352246184F30084966B /* SettingsSection.swift */; };
@@ -75,7 +74,6 @@
 		77B290192477F66B008CB507 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		77B2901A2477F66C008CB507 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		77D271C7246DCCF700DCEB1D /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		77D271C8246DCCF700DCEB1D /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		77D271C9246DCCF700DCEB1D /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		77FE1351246184F30084966B /* UserInfoHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
 		77FE1352246184F30084966B /* SettingsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		770D68372462DC80009855EC /* Авторизация */ = {
 			isa = PBXGroup;
 			children = (
-				770D683D2462DC80009855EC /* Model */,
 				770D683F2462DC80009855EC /* View */,
 				770D68382462DC80009855EC /* Presenter */,
 				770D68422462DC80009855EC /* Custom */,
@@ -137,12 +134,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		770D683D2462DC80009855EC /* Model */ = {
+		770D683D2462DC80009855EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				770D683E2462DC80009855EC /* User.swift */,
+				77B290192477F66B008CB507 /* Event.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		770D683F2462DC80009855EC /* View */ = {
@@ -196,6 +194,7 @@
 				7796A170244EF5C7002FB4FA /* Info.plist */,
 				77A702F42451664300167E5F /* GoogleService-Info.plist */,
 				7796A168244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld */,
+				770D683D2462DC80009855EC /* Models */,
 				7796A176244F23E8002FB4FA /* Экраны */,
 			);
 			path = "Cycle Trip";
@@ -229,7 +228,6 @@
 		77A42D18244F8B4400B28172 /* Карта */ = {
 			isa = PBXGroup;
 			children = (
-				77D271C8246DCCF700DCEB1D /* MapModel.swift */,
 				77D271C9246DCCF700DCEB1D /* MapPresenter.swift */,
 				77D271C7246DCCF700DCEB1D /* MapVC.swift */,
 			);
@@ -252,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				77B290182477F66B008CB507 /* CustomCell.swift */,
-				77B290192477F66B008CB507 /* Event.swift */,
 				77B2901A2477F66C008CB507 /* NavVC.swift */,
 				77B290172477F66B008CB507 /* TableVC.swift */,
 			);
@@ -401,7 +398,6 @@
 				770D684A2462DC80009855EC /* User.swift in Sources */,
 				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
 				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
-				77D271CB246DCCF700DCEB1D /* MapModel.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
 				77B2901E2477F66C008CB507 /* NavVC.swift in Sources */,

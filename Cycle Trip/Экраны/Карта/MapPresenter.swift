@@ -6,15 +6,15 @@
 //  Copyright © 2020 Прогеры. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import MapboxCoreNavigation
-import MapboxNavigation
 import MapboxDirections
 import Mapbox
 
-class MapPresenter {
-    var model: MapModel
-    var mapView: NavigationMapView!
+final class MapPresenter {
+    var mapView: MGLMapView!
+    var mapVC: MapVC!
+    var event: Event?
     var coordinates = [CLLocationCoordinate2D]()
     var directionsRoute: Route?
     func calculateRoute(coordinates: [CLLocationCoordinate2D],
@@ -40,18 +40,17 @@ class MapPresenter {
         }
 
     }
-    init(mapView: NavigationMapView, model: MapModel) {
-        self.mapView = mapView
-        self.model = model
+    init(mapVC: MapVC) {
+        self.mapVC = mapVC
+        mapView = mapVC.mapView
     }
 
     func longPress(coordinate: CLLocationCoordinate2D) {
-        self.coordinates.append(coordinate)
         let annotation = MGLPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = "Start navigation"
         mapView.addAnnotation(annotation)
-
+        self.coordinates.append(coordinate)
         
         // Calculate the route from the user's location to the set destination
         if coordinates.count > 1 {
@@ -63,7 +62,7 @@ class MapPresenter {
     }
     
     func drawRoute(route: Route) {
-        guard route.coordinateCount > 0 else { return }
+        guard route.coordinateCount > 1 else { return }
         // Convert the route’s coordinates into a polyline
         var routeCoordinates = route.coordinates!
         let polyline = MGLPolylineFeature(coordinates: &routeCoordinates, count: route.coordinateCount)
@@ -83,6 +82,11 @@ class MapPresenter {
             mapView.style?.addSource(source)
             mapView.style?.addLayer(lineStyle)
         }
+    }
+    
+    func createEvent(name: String, date: Date) {
+        event = Event(name: name, date: date, startPoint: coordinates.first!)
+
     }
     
     func annotationBuilder(title: String, imageName: String, coordinate: CLLocationCoordinate2D) {
