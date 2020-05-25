@@ -12,7 +12,7 @@ class TabBar: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalTransitionStyle = .flipHorizontal
+        modalTransitionStyle = .coverVertical
         modalPresentationStyle = .fullScreen
         let viewController = ViewController()
         let chatVC = ChatVC()
