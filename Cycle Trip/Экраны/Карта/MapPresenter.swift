@@ -14,7 +14,7 @@ import Mapbox
 final class MapPresenter {
     var mapView: MGLMapView!
     var mapVC: MapVC!
-    var event: Event?
+    var event: Event!
     var coordinates = [CLLocationCoordinate2D]()
     var directionsRoute: Route?
     func calculateRoute(coordinates: [CLLocationCoordinate2D],
@@ -86,6 +86,7 @@ final class MapPresenter {
     
     func createEvent(name: String, date: Date) {
         event = Event(name: name, date: date, startPoint: coordinates.first!)
+        event.upload()
 
     }
     
