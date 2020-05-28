@@ -22,22 +22,26 @@ class RegPresenter: RegScreenPresenter {
     
     let user: User
     let ref: DatabaseReference
+    let password: String
     
     unowned let view: RegScreenView
     
     required init(view: RegScreenView, email: String, password: String, lastName: String, firstName: String) {
-        self.user = User(email: email, password: password, lastName: lastName, firstName: firstName, imageURL: nil)
+        let picture = Picture()
+        
+        self.user = User(email: email, lastName: lastName, firstName: firstName, picture: picture)
         self.ref = Database.database().reference().child("users")
         self.view = view
+        self.password = password
     }
     
     func dataProcessing() {
-        if user.password.count < 8 {
+        if self.password.count < 8 {
             self.view.processingResult(error: CauseOfError.shortPassword.localizedDescription)
             return
         }
         
-        Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] (user, error) in
+        Auth.auth().createUser(withEmail: user.email, password: self.password) { [weak self] (user, error) in
             if let error = error {
                 self?.view.processingResult(error: CauseOfError.invalidEmail.localizedDescription)
                 print(error.localizedDescription)

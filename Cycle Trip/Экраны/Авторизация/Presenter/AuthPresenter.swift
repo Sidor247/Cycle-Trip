@@ -40,7 +40,7 @@ class AuthPresenter: AuthScreenPresenter {
         }
         
         login.logIn(permissions: permissions, from: (self.view as? UIViewController)) { [weak self] (result, error) in
-            guard error == nil, result?.isCancelled == false else {
+            guard error == nil else {
                 print(error?.localizedDescription as Any)
                 return
             }
@@ -48,7 +48,7 @@ class AuthPresenter: AuthScreenPresenter {
             GraphRequest(graphPath: "me", parameters: ["fields":"email,last_name,first_name,picture"], tokenString: AccessToken.current?.tokenString, version: nil, httpMethod: HTTPMethod(rawValue: "GET")).start { (connector, result, error) in
                 guard error == nil, let values = result as? [String: AnyHashable] else {
                     print(error?.localizedDescription as Any)
-                    self?.view.processingResult(error: CauseOfError.serverError.localizedDescription)
+                    self?.view.processingResult(error: CauseOfError.entranceFC.localizedDescription)
                     return
                 }
                 
@@ -57,7 +57,7 @@ class AuthPresenter: AuthScreenPresenter {
                 let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
                 Auth.auth().signIn(with: credential) { (user, error) in
                     guard error == nil else {
-                        self?.view.processingResult(error: CauseOfError.invalidEmail.localizedDescription)
+                        self?.view.processingResult(error: CauseOfError.entranceFC.localizedDescription)
                         return
                     }
         

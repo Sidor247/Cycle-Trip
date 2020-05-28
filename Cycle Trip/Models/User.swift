@@ -11,29 +11,26 @@ import Firebase
 
 struct User {
     let email: String
-    let password: String
     let lastName: String
     let firstName: String
-    let imageURL: String?
+    let picture: Picture
     
-    init(email: String, password: String, lastName: String, firstName: String, imageURL: String?) {
+    init(email: String, lastName: String, firstName: String, picture: Picture) {
         self.email = email
-        self.password = password
         self.lastName = lastName
         self.firstName = firstName
-        self.imageURL = imageURL
+        self.picture = picture
     }
 
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         email = snapshotValue["email"] as! String
-        password = snapshotValue["password"] as! String
-        lastName = snapshotValue["lastName"] as! String
-        firstName = snapshotValue["firstName"] as! String
-        imageURL = snapshotValue["imageURL"] as? String
+        lastName = snapshotValue["last_name"] as! String
+        firstName = snapshotValue["first_name"] as! String
+        picture = Picture(snapshot: snapshot)
     }
     
     func convertToDictionary() -> [AnyHashable : Any] {
-        return ["email": email, "lastName": lastName, "firstName": firstName, "imageURL": imageURL as Any]
+        return ["email": email, "last_name": lastName, "first_name": firstName, "/picture/data/": picture.convertToDictionary()]
     }
 }

@@ -15,6 +15,7 @@ enum CauseOfError {
     case invalidEmail
     case unknownError
     case serverError
+    case entranceFC
 }
 
 extension CauseOfError: LocalizedError {
@@ -31,6 +32,8 @@ extension CauseOfError: LocalizedError {
             return NSLocalizedString("Непредвиденная ошибка", comment: "")
         case .serverError:
             return NSLocalizedString("Ошибка сервера", comment: "")
+        case .entranceFC:
+            return NSLocalizedString("Не удалось войти через Facebook", comment: "")
         }
     }
 }

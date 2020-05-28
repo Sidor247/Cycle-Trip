@@ -51,7 +51,7 @@ class AnimatedView: UIViewController {
 
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
-                self.loggedIn = false
+                self.loggedIn = true
                 return
 
             } else {

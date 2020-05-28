@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770D68462462DC80009855EC /* RegPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68392462DC80009855EC /* RegPresenter.swift */; };
-		770D68482462DC80009855EC /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683B2462DC80009855EC /* AuthPresenter.swift */; };
-		770D684A2462DC80009855EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D683E2462DC80009855EC /* User.swift */; };
 		770D684B2462DC80009855EC /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68402462DC80009855EC /* RegistrationView.swift */; };
 		770D684C2462DC80009855EC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68412462DC80009855EC /* AuthenticationView.swift */; };
 		770D684D2462DC80009855EC /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68432462DC80009855EC /* CustomColor.swift */; };
 		770D684E2462DC80009855EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68442462DC80009855EC /* CustomButton.swift */; };
 		770D684F2462DC80009855EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D68452462DC80009855EC /* CustomTextField.swift */; };
 		771EF0CE246027C300E0F70C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 771EF0CD246027C300E0F70C /* avatar.png */; };
+		77693930248014BB00BE6948 /* CauseOfError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7769392F248014BB00BE6948 /* CauseOfError.swift */; };
+		77693932248014C400BE6948 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77693931248014C400BE6948 /* Picture.swift */; };
+		77693934248014CE00BE6948 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77693933248014CE00BE6948 /* User.swift */; };
+		77693936248014DA00BE6948 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77693935248014D900BE6948 /* AuthPresenter.swift */; };
+		77693938248014F200BE6948 /* RegPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77693937248014F200BE6948 /* RegPresenter.swift */; };
 		7795C3DE247BACC500ECF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7795C3DD247BACC500ECF617 /* RoundButton.swift */; };
 		7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A15F244EF5C4002FB4FA /* AppDelegate.swift */; };
 		7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A161244EF5C4002FB4FA /* SceneDelegate.swift */; };
@@ -44,21 +46,22 @@
 		9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */; };
 		9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */; };
 		93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2E9924676B6000472553 /* AnimatedPresenter.swift */; };
-		93AD2E9C246815E400472553 /* CauseOfError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2E9B246815E400472553 /* CauseOfError.swift */; };
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A73373274DAE35948469F86 /* Pods-Cycle Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.release.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.release.xcconfig"; sourceTree = "<group>"; };
-		770D68392462DC80009855EC /* RegPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegPresenter.swift; sourceTree = "<group>"; };
-		770D683B2462DC80009855EC /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
-		770D683E2462DC80009855EC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		770D68402462DC80009855EC /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		770D68412462DC80009855EC /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		770D68432462DC80009855EC /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		770D68442462DC80009855EC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		770D68452462DC80009855EC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		771EF0CD246027C300E0F70C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		7769392F248014BB00BE6948 /* CauseOfError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseOfError.swift; sourceTree = "<group>"; };
+		77693931248014C400BE6948 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		77693933248014CE00BE6948 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77693935248014D900BE6948 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		77693937248014F200BE6948 /* RegPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegPresenter.swift; sourceTree = "<group>"; };
 		7795C3DD247BACC500ECF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7796A15C244EF5C4002FB4FA /* Cycle Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cycle Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7796A15F244EF5C4002FB4FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		93AD2E9924676B6000472553 /* AnimatedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPresenter.swift; sourceTree = "<group>"; };
-		93AD2E9B246815E400472553 /* CauseOfError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CauseOfError.swift; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				93AD2E9924676B6000472553 /* AnimatedPresenter.swift */,
-				770D68392462DC80009855EC /* RegPresenter.swift */,
-				770D683B2462DC80009855EC /* AuthPresenter.swift */,
+				77693937248014F200BE6948 /* RegPresenter.swift */,
+				77693935248014D900BE6948 /* AuthPresenter.swift */,
 				9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */,
 			);
 			path = Presenter;
@@ -139,8 +141,9 @@
 		770D683D2462DC80009855EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				770D683E2462DC80009855EC /* User.swift */,
 				77B290192477F66B008CB507 /* Event.swift */,
+				77693933248014CE00BE6948 /* User.swift */,
+				77693931248014C400BE6948 /* Picture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,8 +162,8 @@
 		770D68422462DC80009855EC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				7769392F248014BB00BE6948 /* CauseOfError.swift */,
 				933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */,
-				93AD2E9B246815E400472553 /* CauseOfError.swift */,
 				770D68432462DC80009855EC /* CustomColor.swift */,
 				770D68442462DC80009855EC /* CustomButton.swift */,
 				770D68452462DC80009855EC /* CustomTextField.swift */,
@@ -387,20 +390,19 @@
 				802FCEAA2455D6F500CF04DC /* ChatVCCell.swift in Sources */,
 				77B2901D2477F66C008CB507 /* Event.swift in Sources */,
 				77FE1355246184F30084966B /* UserInfoHeader.swift in Sources */,
+				77693932248014C400BE6948 /* Picture.swift in Sources */,
 				770D684B2462DC80009855EC /* RegistrationView.swift in Sources */,
 				802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */,
-				770D68462462DC80009855EC /* RegPresenter.swift in Sources */,
-				770D68482462DC80009855EC /* AuthPresenter.swift in Sources */,
 				77B2901C2477F66C008CB507 /* CustomCell.swift in Sources */,
+				77693938248014F200BE6948 /* RegPresenter.swift in Sources */,
 				802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */,
-				93AD2E9C246815E400472553 /* CauseOfError.swift in Sources */,
 				77FE1356246184F30084966B /* SettingsSection.swift in Sources */,
 				9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */,
 				770D684F2462DC80009855EC /* CustomTextField.swift in Sources */,
 				77B2901B2477F66C008CB507 /* TableVC.swift in Sources */,
 				7795C3DE247BACC500ECF617 /* RoundButton.swift in Sources */,
-				770D684A2462DC80009855EC /* User.swift in Sources */,
 				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
+				77693936248014DA00BE6948 /* AuthPresenter.swift in Sources */,
 				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
@@ -410,12 +412,14 @@
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
 				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
 				77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */,
+				77693934248014CE00BE6948 /* User.swift in Sources */,
 				77A42D1F244F8DB100B28172 /* AnimatedView.swift in Sources */,
 				770D684C2462DC80009855EC /* AuthenticationView.swift in Sources */,
 				7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */,
 				770D684E2462DC80009855EC /* CustomButton.swift in Sources */,
 				770D684D2462DC80009855EC /* CustomColor.swift in Sources */,
 				77D271CA246DCCF700DCEB1D /* MapVC.swift in Sources */,
+				77693930248014BB00BE6948 /* CauseOfError.swift in Sources */,
 				77FE1357246184F30084966B /* SettingsCell.swift in Sources */,
 				7796A179244F2937002FB4FA /* TabBar.swift in Sources */,
 			);
