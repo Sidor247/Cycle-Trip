@@ -26,6 +26,13 @@
 		802FCEAC2455E33800CF04DC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAB2455E33800CF04DC /* CustomImageView.swift */; };
 		802FCEAE2455EC6800CF04DC /* ChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAD2455EC6800CF04DC /* ChatAPI.swift */; };
 		802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */; };
+<<<<<<< Updated upstream
+=======
+		80B885F32481C1D100F201DD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B885F22481C1D100F201DD /* Chat.swift */; };
+		933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */; };
+		9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */; };
+		9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */; };
+>>>>>>> Stashed changes
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +59,7 @@
 		802FCEAB2455E33800CF04DC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		802FCEAD2455EC6800CF04DC /* ChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPI.swift; sourceTree = "<group>"; };
 		802FCEAF24560E3300CF04DC /* ChatVCwithConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCwithConnection.swift; sourceTree = "<group>"; };
+		80B885F22481C1D100F201DD /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		8E5AC258D60FE5AFD838BEB1 /* Pods-Cycle Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cycle Trip.debug.xcconfig"; path = "Target Support Files/Pods-Cycle Trip/Pods-Cycle Trip.debug.xcconfig"; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +85,63 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
+=======
+		770D68372462DC80009855EC /* Авторизация */ = {
+			isa = PBXGroup;
+			children = (
+				770D683F2462DC80009855EC /* View */,
+				770D68382462DC80009855EC /* Presenter */,
+				770D68422462DC80009855EC /* Custom */,
+			);
+			path = "Авторизация";
+			sourceTree = "<group>";
+		};
+		770D68382462DC80009855EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				77693937248014F200BE6948 /* RegPresenter.swift */,
+				77693935248014D900BE6948 /* AuthPresenter.swift */,
+				9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		770D683D2462DC80009855EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				77B290192477F66B008CB507 /* Event.swift */,
+				77693933248014CE00BE6948 /* User.swift */,
+				77693931248014C400BE6948 /* Picture.swift */,
+				80B885F22481C1D100F201DD /* Chat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		770D683F2462DC80009855EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77A42D1E244F8DB100B28172 /* AnimatedView.swift */,
+				770D68402462DC80009855EC /* RegistrationView.swift */,
+				770D68412462DC80009855EC /* AuthenticationView.swift */,
+				9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		770D68422462DC80009855EC /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				7769392F248014BB00BE6948 /* CauseOfError.swift */,
+				933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */,
+				770D68432462DC80009855EC /* CustomColor.swift */,
+				770D68442462DC80009855EC /* CustomButton.swift */,
+				770D68452462DC80009855EC /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 		7796A153244EF5C4002FB4FA = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +361,7 @@
 				7796A160244EF5C4002FB4FA /* AppDelegate.swift in Sources */,
 				7796A17D244F5448002FB4FA /* BackgroundView.swift in Sources */,
 				802FCEB024560E3300CF04DC /* ChatVCwithConnection.swift in Sources */,
+				80B885F32481C1D100F201DD /* Chat.swift in Sources */,
 				77A42D1D244F8D0400B28172 /* ChatVC.swift in Sources */,
 				77A42D1F244F8DB100B28172 /* StartAnimation.swift in Sources */,
 				7796A162244EF5C4002FB4FA /* SceneDelegate.swift in Sources */,
