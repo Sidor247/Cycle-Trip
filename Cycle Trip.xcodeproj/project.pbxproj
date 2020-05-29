@@ -45,7 +45,6 @@
 		933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */; };
 		9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */; };
 		9353F4BE2469E0AC004048AF /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */; };
-		93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2E9924676B6000472553 /* AnimatedPresenter.swift */; };
 		D3B4958E98E66F2C117FCDD2 /* Pods_Cycle_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +91,6 @@
 		933E5D11246605DF0017AE43 /* SpringTimingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringTimingParameters.swift; sourceTree = "<group>"; };
 		9353F4BB2469C59E004048AF /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
-		93AD2E9924676B6000472553 /* AnimatedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPresenter.swift; sourceTree = "<group>"; };
 		A8CCBE69009EF0FDB239B443 /* Pods_Cycle_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cycle_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,7 +128,6 @@
 		770D68382462DC80009855EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				93AD2E9924676B6000472553 /* AnimatedPresenter.swift */,
 				77693937248014F200BE6948 /* RegPresenter.swift */,
 				77693935248014D900BE6948 /* AuthPresenter.swift */,
 				9353F4BD2469E0AC004048AF /* ForgotPasswordPresenter.swift */,
@@ -403,7 +400,6 @@
 				7795C3DE247BACC500ECF617 /* RoundButton.swift in Sources */,
 				9353F4BC2469C59E004048AF /* ForgotPasswordView.swift in Sources */,
 				77693936248014DA00BE6948 /* AuthPresenter.swift in Sources */,
-				93AD2E9A24676B6000472553 /* AnimatedPresenter.swift in Sources */,
 				7796A16A244EF5C4002FB4FA /* Cycle_Trip.xcdatamodeld in Sources */,
 				933E5D12246605DF0017AE43 /* SpringTimingParameters.swift in Sources */,
 				77B2901E2477F66C008CB507 /* NavVC.swift in Sources */,
