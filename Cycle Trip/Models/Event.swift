@@ -52,7 +52,7 @@ struct Event {
     func uploadEvent() {
         let pointDic = ["latitude": startPoint.latitude, "longitude":startPoint.longitude]
         let dictionary = ["name":name,"date":formatter.string(from: date), "startPoint": pointDic, "creator": creator, "points" : pointsToDic(points), "routeJSON" : routeJSON] as [String : Any]
-        ref.child(name).setValue(dictionary)
+        ref.childByAutoId().setValue(dictionary)
     }
     func pointsToDic(_ points:[CLLocationCoordinate2D]) -> [String : Any] {
         var pointsDic = [String:Any]()

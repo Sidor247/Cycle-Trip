@@ -101,7 +101,7 @@ final class MapPresenter {
     func getUserData() {
         self.ref.child("users").child(uid).observe(.value, with: {[weak self] (snapshot) in
             let snapshotValue = snapshot.value as! [String : Any]
-            self?.eventNames = snapshotValue["eventNames"] as? [String]
+            self?.eventNames = snapshotValue["eventNames"] as? [String] ?? []
             self?.getUserEvents()
 
         })
